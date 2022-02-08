@@ -9,17 +9,17 @@ Le module fonctionnant avec JQuery, la variable globale $ doit être définie da
 jquery-ui-bundle
 
 ## Exemple d'utilisation
-<html>
-	<body>
-		<div id="my-content">
-			<select class="combobox">
-				<option value="1">mon premier choix</option>
-				<option value="2">mon second choix</option>
-				<option value="3">mon troisieme choix</option>
-			</select>
-		</div>
+\<html\>
+	\<body\>
+		\<div id="my-content"\>
+			\<select class="combobox"\>
+				\<option value="1"\>mon premier choix\</option\>
+				\<option value="2">mon second choix\</option\>
+				\<option value="3">mon troisieme choix\</option\>
+			\</select>
+		\</div>
 		
-		<script>
+		\<script\>
 			$('select.combobox').each(function(){
 				let options = {
 					appendTo: "#my-content",
@@ -36,7 +36,7 @@ jquery-ui-bundle
 			$('select.combobox').first().on('comboboxselect', function(event, item) {
 				alert(`${item.item.value} est une super sélection, bravo!`);
 			});
-		</script>
-	</body>
-</html>
+		\</script\>
+	\</body\>
+\</html\>
 
