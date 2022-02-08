@@ -9,7 +9,8 @@ Le module fonctionnant avec JQuery, la variable globale $ doit être définie da
 jquery-ui-bundle
 
 ## Exemple d'utilisation
-<p>&lt;html\&gt;</p>
+&lt;html\&gt;
+
 <p>	&lt;body\&gt;</p>
 <p>		&lt;div id="my-content"\&gt;</p>
 <p>			&lt;select class="combobox"\&gt;</p>
