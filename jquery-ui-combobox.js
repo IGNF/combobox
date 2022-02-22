@@ -46,7 +46,7 @@ $.widget("custom.combobox", {
         var self = this;
 
         var selected = this.element.children(":selected"),
-            value = selected.val() ? selected.text() : "";
+            value = selected.text();
 
         this.input = $('<input>', { class: 'form-control custom-combobox-input', value: value, title: '' })
             .autocompleteext({
