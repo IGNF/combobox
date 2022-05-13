@@ -118,7 +118,7 @@ $.widget("custom.combobox", {
 
     _findOption: function (text) {
         let option = null;
-        let ltext = text.toLowerCase();
+        let ltext = text ? text.toLowerCase() : '';
         this.element.children("option").each(function () {
             if ($(this).text().toLowerCase() === ltext) {
                 option = $(this);
