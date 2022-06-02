@@ -18,6 +18,6 @@
   "author": "pprevautel",
   "license": "Propriétaire",
   "dependencies": {
-    "jquery-ui-bundle": "^1.12.1-migrate"
+	"jquery": "^3.5.1"
   }
 }

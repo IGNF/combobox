@@ -1,5 +1,5 @@
-require('jquery-ui-bundle/jquery-ui.min.js');
-require('jquery-ui-bundle/jquery-ui.min.css');
+require('jquery-ui.min.js');
+require('jquery-ui.min.css');
 
 $.widget("custom.autocompleteext", $.ui.autocomplete, {
     options: {
