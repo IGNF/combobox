@@ -1,5 +1,6 @@
 require('jquery-ui/ui/widget');
 require('jquery-ui/ui/widgets/autocomplete');
+require('jquery-ui/themes/base/autocomplete.css')
 
 $.widget("custom.autocompleteext", $.ui.autocomplete, {
     options: {
