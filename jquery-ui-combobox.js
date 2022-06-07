@@ -1,5 +1,5 @@
-require('jquery-ui.min.js');
-require('jquery-ui.min.css');
+require('jquery-ui/ui/widget');
+require('jquery-ui/ui/widgets/autocomplete');
 
 $.widget("custom.autocompleteext", $.ui.autocomplete, {
     options: {

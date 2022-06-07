@@ -6,7 +6,7 @@ npm install git+http://gitlab.dockerforge.ign.fr/ign/combobox.git
 
 ## Dépendances
 Le module fonctionnant avec JQuery, la variable globale $ doit être définie dans le projet
-jquery-ui-bundle
+jquery-ui (widget et autocomplete)
 
 ## Exemple d'utilisation
 html:
