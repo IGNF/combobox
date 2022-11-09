@@ -34,6 +34,11 @@ $.widget("custom.combobox", {
     },
 
     _create: function () {
+        this.wrapper = null;
+        if (this.element.is(':disabled')) {
+            return;
+        }
+        
         this.wrapper = $('<div>', { class: 'input-group' }).insertAfter(this.element);
 
         this.element.hide();
@@ -162,7 +167,7 @@ $.widget("custom.combobox", {
     },
 
     _destroy: function () {
-        this.wrapper.remove();
+        if (this.wrapper) this.wrapper.remove();
         this.element.show();
     },
 
@@ -184,7 +189,7 @@ $.widget("custom.combobox", {
     },
 
     setDisabled: function (b) {
-        this.wrapper.find('*').prop('disabled', b);
+        if (this.wrapper) this.wrapper.find('*').prop('disabled', b);
     },
 
     setFilter: function (filter) {
