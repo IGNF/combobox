@@ -34,11 +34,6 @@ $.widget("custom.combobox", {
     },
 
     _create: function () {
-        this.wrapper = null;
-        if (this.element.is(':disabled')) {
-            return;
-        }
-        
         this.wrapper = $('<div>', { class: 'input-group' }).insertAfter(this.element);
 
         this.element.hide();
@@ -50,8 +45,6 @@ $.widget("custom.combobox", {
     },
 
     _createAutocomplete: function () {
-        var self = this;
-
         var selected = this.element.children(":selected"),
             value = selected.text();
 
