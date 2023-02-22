@@ -3,6 +3,11 @@ require('jquery-ui/ui/widgets/autocomplete');
 require('jquery-ui/themes/base/theme.css');
 require('jquery-ui/themes/base/autocomplete.css')
 
+function _removeDiacritics(str) {
+    if (! str) return str;
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+}
+
 $.widget("custom.autocompleteext", $.ui.autocomplete, {
     options: {
         filter: null
@@ -103,12 +108,12 @@ $.widget("custom.combobox", {
     },
 
     _source: function (request, response) {
-        let term = jsutils.removeDiacritics(request.term);
+        let term = _removeDiacritics(request.term);
         var matcher = new RegExp('^' + $.ui.autocomplete.escapeRegex(term), "i");
 
         response(this.element.children("option").map(function () {
             var text = $(this).text();
-            if ( /*this.value &&*/ (!request.term || matcher.test(jsutils.removeDiacritics(text)))) return {
+            if ( /*this.value &&*/ (!request.term || matcher.test(_removeDiacritics(text)))) return {
                 label: text,
                 value: text,
                 option: this
