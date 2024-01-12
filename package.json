@@ -1,5 +1,5 @@
 {
-  "name": "@ign-mut/combobox",
+  "name": "combobox",
   "version": "1.0.0",
   "description": "Combobox permettant de rajouter une fonctionnalité de recherche à un élément html select",
   "main": "jquery-ui-combobox.js",
